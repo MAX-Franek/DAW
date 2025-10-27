@@ -6,7 +6,7 @@ RUN apt update && apt install -yq --no-install-recommends \
     nano \
     net-tools iputils-ping
 
-RUN useradd -rm -f /home/fran -s /bin/bash fran
+RUN useradd -rm -d /home/fran -s /bin/bash fran
 #Para crear el password usamos el comando chpasswd
 RUN echo "fran:1234" | chpasswd
 
